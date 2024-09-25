@@ -14,7 +14,7 @@ pip install paudio
 ## Example Usage
 
 ```
-from paudio import parecord
+from pAudio import parecord
 
 # Example of recording with specific options
 output_file = "output.wav"
