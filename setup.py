@@ -1,9 +1,19 @@
 
 from setuptools import setup, find_packages
+import os
+
+#Checking PulseAudio is installed or not
+try:
+    os.system("paplay --version")
+    os.system("parecord --version")
+except:
+    print("Please install PulseAudio first.")
+    exit()
+
 
 setup(
     name="paudio",
-    version="0.1.2",
+    version="0.3.0",
     description="A Python wrapper for paplay and parecord to play and record audio using PulseAudio.",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
